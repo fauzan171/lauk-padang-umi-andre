@@ -5,22 +5,22 @@ export default function Testimonials() {
   const reviews = [
     {
       name: "Bambang Rahardian",
-      role: "Karyawan Swasta di Cawang",
-      quote: "Rendangnya luar biasa empuk dan bumbu hitam karamelnya sangat meresap persis Pagi Sore tapi dengan harga UMKM yang bersahabat. Setiap jam istirahat kantor selalu ke sini.",
+      role: "Staf kantor di Cawang • Nasi kotak rapat",
+      quote: "Pesan nasi kotak untuk rapat tim. Lauk dan sambalnya dipisah, jadi sampai kantor masih rapi. Menunya juga bisa disesuaikan budget yang kami punya.",
       rating: 5,
       avatarText: "BR"
     },
     {
       name: "Siti Nurhaliza",
-      role: "Pelanggan GoFood & GrabFood",
-      quote: "Ayam pop dan sambal ladonya segar banget! Minyak kelapanya wangi. Kalau pesan lewat GoFood atau GrabFood, kuah gulai dibungkus rapat double anti bocor. Sangat rapi!",
+      role: "Pelanggan warung harian",
+      quote: "Paket nasi cumi cabe ijo sama dadar barendo jadi andalan makan siang. Dadarnya pinggirnya garing, cuminya tidak amis. Mie gorengnya juga masih panas waktu diambil.",
       rating: 5,
       avatarText: "SN"
     },
     {
       name: "Hendro Wibowo",
-      role: "Pelanggan Katering Nasi Kotak",
-      quote: "Pesan 60 box nasi rendang komplit untuk acara syukuran kantor. Semua rekan kerja memuji rasa sayur nangka dan tunjangnya. Pengantaran tepat waktu masih hangat.",
+      role: "Acara keluarga • Prasmanan arisan",
+      quote: "Untuk arisan keluarga saya minta kombinasi lauk Padang dan lauk yang tidak pedas supaya anak-anak bisa makan. Admin yang menyusun menunya, hasilnya pas.",
       rating: 5,
       avatarText: "HW"
     }
@@ -30,8 +30,8 @@ export default function Testimonials() {
     <section className="section-testi">
       <div className="container">
         <div className="section-header text-center">
-          <span className="eyebrow-text">TESTIMONI PELANGGAN</span>
-          <h2 className="section-heading">Kelezatan yang Diakui di Cawang</h2>
+          <span className="eyebrow-text">CATATAN PELANGGAN</span>
+          <h2 className="section-heading">Dari pesanan catering sampai makan siang harian</h2>
           <div className="gold-divider center-div"></div>
         </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { RESTAURANT_INFO } from '../data';
-import { Users, Sparkles, Wind, Car, CalendarCheck } from 'lucide-react';
+import { WA_LINKS } from '../data';
+import { UtensilsCrossed, Wind, Car, MessageCircle } from 'lucide-react';
 
 export default function DineIn() {
   return (
@@ -8,46 +8,48 @@ export default function DineIn() {
       <div className="container">
         <div className="dinein-card-banner">
           <div className="dinein-header-content text-center">
-            <span className="eyebrow-text gold-text">TRADISI MANJANGKAN PIRING</span>
-            <h2 className="section-heading light-heading">Pengalaman Makan Di Tempat (Dine-In)</h2>
+            <span className="eyebrow-text gold-text">MAKAN DI WARUNG</span>
+            <h2 className="section-heading light-heading">Mampir sebentar, makan panas, lanjut lagi</h2>
             <div className="gold-divider center-div"></div>
             <p className="dinein-description">
-              Sambut keramahan Ranah Minang di Warung Umi Andrew Cawang. Rasakan tradisi hidang di mana belasan piring aneka lauk tersaji rapi di meja Anda. Cukup nikmati lauk yang Anda sukai, hanya bayar apa yang dimakan.
+              Warung kami sederhana, bukan rumah makan Padang besar dengan deretan etalase. Yang tersedia tiap hari adalah paket nasi dengan cumi cabe ijo atau ayam suwir balado plus telur dadar barendo, lalu kwetiaw goreng, nasi goreng, mie goreng, dan mie rebus. Semuanya bisa dimakan di tempat atau dibungkus.
             </p>
           </div>
 
           <div className="dinein-perks-grid">
             <div className="dinein-perk-item">
-              <div className="perk-icon-circle"><Sparkles size={24} /></div>
-              <h4>Sensasi Meja Hidang</h4>
-              <p>Aneka lauk rendang, ayam pop, tunjang, dan gulai disajikan lengkap di meja selayaknya jamuan istimewa.</p>
+              <div className="perk-icon-circle"><UtensilsCrossed size={24} /></div>
+              <h4>Dimasak Per Pesanan</h4>
+              <p>Mie, kwetiaw, dan nasi goreng dibuat saat dipesan supaya masih panas. Tingkat pedas dan tambahan telur bisa diminta.</p>
             </div>
 
             <div className="dinein-perk-item">
               <div className="perk-icon-circle"><Wind size={24} /></div>
-              <h4>Ruang Nyaman & Bersih</h4>
-              <p>Area makan ber-AC, musholla pria & wanita bersih, kobokan higienis, serta Wi-Fi cepat.</p>
+              <h4>Ruang Makan Ringkas</h4>
+              <p>Meja disiapkan untuk makan cepat di sela kerja, atau untuk menunggu pesanan dibungkus dan diambil.</p>
             </div>
 
             <div className="dinein-perk-item">
               <div className="perk-icon-circle"><Car size={24} /></div>
-              <h4>Akses & Parkir Mudah di Cawang</h4>
-              <p>Terletak di jalan utama Dewi Sartika, area parkir motor dan mobil nyaman didampingi juru parkir.</p>
+              <h4>Akses Cawang</h4>
+              <p>Di jalur Dewi Sartika, dekat area kantor, halte, dan rute pulang kerja Jakarta Timur.</p>
             </div>
           </div>
 
           <div className="dinein-booking-box">
             <div className="booking-info">
-              <div className="booking-title">Mau Makan Siang Tim Kantor atau Kumpul Keluarga?</div>
-              <p className="booking-subtitle">Hubungi kami untuk reservasi meja hidang khusus agar tidak perlu mengantre saat jam makan sibuk.</p>
+              <div className="booking-title">Mau ambil pesanan catering di warung?</div>
+              <p className="booking-subtitle">
+                Chat dulu supaya lauk siap saat Anda tiba, atau sekalian atur pengiriman ke lokasi acara di Cawang dan sekitarnya.
+              </p>
             </div>
-            <a 
-              href={`https://wa.me/${RESTAURANT_INFO.phoneRaw}?text=Halo%20Umi%20Andrew,%20saya%20mau%20reservasi%20meja%20dine-in`}
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={WA_LINKS.lokasi}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-gold"
             >
-              <CalendarCheck size={18} /> Reservasi Meja Dine-In
+              <MessageCircle size={18} /> Chat Admin
             </a>
           </div>
         </div>

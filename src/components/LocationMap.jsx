@@ -1,6 +1,6 @@
 import React from 'react';
 import { RESTAURANT_INFO } from '../data';
-import { MapPin, Clock, Phone, ExternalLink, Navigation } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 
 export default function LocationMap() {
   return (
@@ -13,7 +13,7 @@ export default function LocationMap() {
             <div className="gold-divider"></div>
             
             <p className="narrative-text">
-              Berlokasi di jalan protokol Dewi Sartika Cawang, mudah dijangkau dari arah Tebet, Pancoran, Kampung Melayu, Halim, maupun Cililitan.
+              Berlokasi di jalan protokol Dewi Sartika Cawang, mudah dijangkau dari arah Tebet, Pancoran, Kampung Melayu, Halim, maupun Cililitan. Titik ini juga jadi tempat pengambilan pesanan catering, sekaligus pangkal pengiriman ke area sekitarnya.
             </p>
 
             <div className="location-details-list">
@@ -46,10 +46,10 @@ export default function LocationMap() {
             </div>
 
             <div className="location-buttons-row">
-              <a 
-                href="https://maps.google.com/?q=Cawang+Jakarta+Timur" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={RESTAURANT_INFO.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-gold"
               >
                 <Navigation size={16} /> Buka Google Maps

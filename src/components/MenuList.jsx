@@ -1,97 +1,75 @@
-import React, { useState } from 'react';
-import { MENU_ITEMS, RESTAURANT_INFO } from '../data';
-import { Plus, ShoppingCart, Sparkles } from 'lucide-react';
+import React from 'react';
+import { DAILY_MENU_GROUPS, WA_LINKS } from '../data';
+import { Plus, ArrowRight } from 'lucide-react';
 
 export default function MenuList({ onSelectItem }) {
-  const [activeTab, setActiveTab] = useState('all');
-
-  const categories = [
-    { id: 'all', label: 'Semua Menu' },
-    { id: 'daging', label: 'Daging & Tunjang' },
-    { id: 'ayam', label: 'Ayam & Bebek' },
-    { id: 'ikan', label: 'Ikan & Seafood' },
-    { id: 'sayur', label: 'Sayur & Telur' },
-    { id: 'paket', label: 'Paket Nasi Kotak' }
-  ];
-
-  const filteredItems = activeTab === 'all' 
-    ? MENU_ITEMS 
-    : MENU_ITEMS.filter(item => item.category === activeTab);
-
   return (
-    <section className="section-menu" id="menu">
+    <section className="section-menu" id="menu-harian">
       <div className="container">
         <div className="section-header text-center">
-          <span className="eyebrow-text">SAJIAN LAUK TERBAIK</span>
-          <h2 className="section-heading">Katalog Menu Warung Umi Andrew</h2>
+          <span className="eyebrow-text">MENU HARIAN WARUNG</span>
+          <h2 className="section-heading">Yang siap tiap hari di warung</h2>
           <div className="gold-divider center-div"></div>
           <p className="section-desc">
-            Disajikan setiap hari dengan daun singkong rebus lembut, kuah gulai nangka kapau, dan sambal ijo lado mudo segar.
+            Enam menu ini yang memang kami masak dan sedia setiap hari. Untuk lauk Padang dalam jumlah banyak — rendang, ayam pop, gulai — silakan lewat jalur catering supaya dimasak bertahap mengikuti jadwal acara.
           </p>
-
-          {/* Category Filter Tabs */}
-          <div className="menu-filter-bar">
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                className={`filter-tab-btn ${activeTab === cat.id ? 'active' : ''}`}
-                onClick={() => setActiveTab(cat.id)}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
+          <p className="section-price-note">
+            Harga mengikuti porsi dan pesanan, jadi tidak kami cantumkan di sini. Sebutkan menu yang dimau lewat WhatsApp atau aplikasi.
+          </p>
         </div>
 
-        {/* Menu Grid */}
-        <div className="menu-cards-grid">
-          {filteredItems.map(item => (
-            <div className="food-card" key={item.id}>
-              <div className="food-thumbnail-wrap">
-                {item.tag && <span className="food-ribbon-tag">{item.tag}</span>}
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className="food-img" 
-                  loading="lazy" 
-                />
+        <div className="daily-groups">
+          {DAILY_MENU_GROUPS.map((group) => (
+            <div className="daily-group" key={group.id}>
+              <div className="daily-group-head">
+                <h3>{group.label}</h3>
+                <p>{group.note}</p>
               </div>
 
-              <div className="food-body">
-                <div className="food-title-row">
-                  <h3 className="food-title">{item.name}</h3>
-                  <span className="food-price">{item.priceFormatted}</span>
-                </div>
-                <p className="food-desc">{item.desc}</p>
-                
-                <div className="food-card-bottom">
-                  <span className="food-spec-tag">{item.spiceLevel}</span>
-                  <button 
-                    className="btn-add-order"
-                    onClick={() => onSelectItem(item)}
-                  >
-                    <Plus size={16} /> Pesan
-                  </button>
-                </div>
+              <div className="daily-cards-grid">
+                {group.items.map((item) => (
+                  <article className="daily-card" key={item.id}>
+                    {item.badge && <span className="daily-card-badge">{item.badge}</span>}
+                    <h4 className="daily-card-name">{item.name}</h4>
+                    <p className="daily-card-desc">{item.desc}</p>
+
+                    <ul className="daily-traits">
+                      {item.traits.map((trait) => (
+                        <li className="daily-trait-chip" key={trait}>{trait}</li>
+                      ))}
+                    </ul>
+
+                    <button
+                      className="btn-add-order"
+                      onClick={() => onSelectItem(item)}
+                    >
+                      <Plus size={16} /> Pesan Menu Ini
+                    </button>
+                  </article>
+                ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Catering & Box Promo Banner */}
         <div className="catering-alert-box">
           <div className="catering-text">
-            <h3>Kebutuhan Katering & Nasi Kotak Rapat di Cawang?</h3>
-            <p>Melayani pesanan 10 hingga 500 box dengan kemasan eksklusif, lauk dipisah plastik segel, lengkap dengan sendok & tisu.</p>
+            <h3>Butuh dalam jumlah banyak, atau mau lauk Padang lengkap?</h3>
+            <p>Pindah ke jalur catering: nasi kotak, prasmanan, dan acara keluarga dengan lauk serta harga yang bisa disesuaikan permintaan.</p>
           </div>
-          <a 
-            href={`https://wa.me/${RESTAURANT_INFO.phoneRaw}?text=Halo%20Umi%20Andrew,%20saya%20mau%20order%20Paket%20Nasi%20Kotak%20untuk%20acara`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-gold"
-          >
-            Konsultasi Nasi Kotak
-          </a>
+          <div className="catering-alert-actions">
+            <a href="#katalog-lauk" className="btn btn-outline-dark">
+              Lihat Katalog Lauk <ArrowRight size={16} />
+            </a>
+            <a
+              href={WA_LINKS.catering}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-gold"
+            >
+              Konsultasi Catering
+            </a>
+          </div>
         </div>
       </div>
     </section>
