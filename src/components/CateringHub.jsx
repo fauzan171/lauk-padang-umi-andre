@@ -1,6 +1,7 @@
 import React from 'react';
 import { HERO_IMAGE, WA_LINKS } from '../data';
-import { MessageCircle, ChefHat, Wallet, PackageCheck } from 'lucide-react';
+import { ChefHat, Wallet, PackageCheck } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CateringHub() {
   return (
@@ -52,7 +53,7 @@ export default function CateringHub() {
             rel="noopener noreferrer"
             className="btn btn-gold"
           >
-            <MessageCircle size={18} /> Konsultasi Catering
+            <WhatsAppIcon size={18} /> Konsultasi Catering
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RESTAURANT_INFO, WA_LINKS } from '../data';
-import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="btn btn-gold btn-compact"
             >
-              <MessageCircle size={15} /> Konsultasi
+              <WhatsAppIcon size={15} /> Konsultasi
             </a>
             <button
               className="hamburger-btn"

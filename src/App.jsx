@@ -12,12 +12,15 @@ import Testimonials from './components/Testimonials';
 import LocationMap from './components/LocationMap';
 import Footer from './components/Footer';
 import OrderModal from './components/OrderModal';
-import { WA_LINKS } from './data';
-import { Truck, MessageCircle } from 'lucide-react';
+import QtyModal from './components/QtyModal';
+import { WA_LINKS, WA_HREF_TO_KEY } from './data';
+import { Truck } from 'lucide-react';
+import WhatsAppIcon from './components/WhatsAppIcon';
 import './App.css';
 
 export default function App() {
   const [selectedItem, setSelectedItem] = useState(null);
+  const [qtyOrderKey, setQtyOrderKey] = useState(null);
 
   /* Napas: reveal-on-scroll. Satu observer untuk seluruh halaman,
      elemen cukup membawa class "reveal". `once` — tidak bolak-balik. */
@@ -40,6 +43,22 @@ export default function App() {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
+  }, []);
+
+  /* Delegasi klik: semua link wa.me yang butuh jumlah diintersep,
+     buka modal input jumlah dulu — pesan final disusun ulang dengan jumlah. */
+  useEffect(() => {
+    const onClick = (e) => {
+      const a = e.target.closest('a[href]');
+      if (!a) return;
+      const key = WA_HREF_TO_KEY[a.href];
+      if (key) {
+        e.preventDefault();
+        setQtyOrderKey(key);
+      }
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
   }, []);
 
   return (
@@ -65,7 +84,7 @@ export default function App() {
           rel="noopener noreferrer"
           className="sticky-nav-btn btn-catering-sticky"
         >
-          <MessageCircle size={16} /> Catering
+          <WhatsAppIcon size={16} /> Catering
         </a>
         <a
           href={WA_LINKS.menuHarian}
@@ -82,6 +101,18 @@ export default function App() {
         <OrderModal
           item={selectedItem}
           onClose={() => setSelectedItem(null)}
+          onAskQty={() => {
+            setSelectedItem(null);
+            setQtyOrderKey('menuHarian');
+          }}
+        />
+      )}
+
+      {/* Modal input jumlah sebelum buka WhatsApp */}
+      {qtyOrderKey && (
+        <QtyModal
+          orderKey={qtyOrderKey}
+          onCancel={() => setQtyOrderKey(null)}
         />
       )}
     </div>

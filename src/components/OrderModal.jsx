@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { WA_LINKS } from '../data';
-import { X, MessageCircle } from 'lucide-react';
+import { X } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
-export default function OrderModal({ item, onClose }) {
+export default function OrderModal({ item, onClose, onAskQty }) {
   const closeBtnRef = useRef(null);
 
   useEffect(() => {
@@ -50,18 +50,16 @@ export default function OrderModal({ item, onClose }) {
           <p className="modal-prompt">Pesan langsung ke admin:</p>
 
           <div className="modal-actions-list">
-            <a
-              href={WA_LINKS.menuDetail(item.name)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
               className="modal-channel-btn btn-wa"
+              onClick={() => onAskQty(item)}
             >
-              <div className="channel-icon-mini"><MessageCircle size={18} /></div>
+              <div className="channel-icon-mini"><WhatsAppIcon size={18} /></div>
               <div className="channel-txt">
                 <strong>Pesan via WhatsApp</strong>
-                <span>Tanya harga, request pedas, atau atur jam ambil</span>
+                <span>Isi jumlah dulu, nanti terkirim ke admin</span>
               </div>
-            </a>
+            </button>
           </div>
         </div>
       </div>

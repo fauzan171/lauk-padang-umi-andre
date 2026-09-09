@@ -1,6 +1,7 @@
 import React from 'react';
 import { WA_LINKS } from '../data';
-import { UtensilsCrossed, Wind, Car, MessageCircle } from 'lucide-react';
+import { UtensilsCrossed, Wind, Car } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function DineIn() {
   return (
@@ -49,7 +50,7 @@ export default function DineIn() {
               rel="noopener noreferrer"
               className="btn btn-gold"
             >
-              <MessageCircle size={18} /> Chat Admin
+              <WhatsAppIcon size={18} /> Chat Admin
             </a>
           </div>
         </div>

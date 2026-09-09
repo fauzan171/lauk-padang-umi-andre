@@ -2255,6 +2255,112 @@ ol {
 }
 
 /* ───────────────────────────────
+   MODAL INPUT JUMLAH
+   ─────────────────────────────── */
+.qty-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.qty-step-btn {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-cream);
+  color: var(--text-primary);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.qty-step-btn:hover {
+  background: var(--bg-cream-dark);
+  border-color: var(--border-gold);
+}
+
+.qty-step-btn:active {
+  background: var(--gold-soft);
+}
+
+.qty-input {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  background: var(--bg-white);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  outline: none;
+}
+
+.qty-input:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(169, 68, 44, 0.12);
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.qty-preview {
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+  border: 1px dashed var(--border-gold);
+  border-radius: var(--radius-md);
+  background: var(--bg-cream);
+}
+
+.qty-preview-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-2);
+}
+
+.qty-preview-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.qty-send-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.qty-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ───────────────────────────────
    18. STICKY MOBILE BAR
    ─────────────────────────────── */
 .mobile-sticky-quick-order {

@@ -1,9 +1,10 @@
 import React from 'react';
 import { RESTAURANT_INFO, WA_LINKS } from '../data';
-import { MessageSquareText, Check, PackageCheck, Users, Repeat, UtensilsCrossed } from 'lucide-react';
+import { Check, PackageCheck, Users, Repeat, UtensilsCrossed } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const QUICK_LINKS = [
-  { icon: MessageSquareText, label: 'Konsultasi Catering', desc: 'Ceritakan acaranya, kami susun menunya', href: WA_LINKS.catering },
+  { icon: WhatsAppIcon, label: 'Konsultasi Catering', desc: 'Ceritakan acaranya, kami susun menunya', href: WA_LINKS.catering },
   { icon: PackageCheck, label: 'Nasi Kotak Kantor', desc: 'Untuk rapat, training, makan siang tim', href: WA_LINKS.nasiKotak },
   { icon: Users, label: 'Prasmanan Acara', desc: 'Buffet untuk acara di rumah atau gedung', href: WA_LINKS.prasmanan },
   { icon: Repeat, label: 'Catering Harian', desc: 'Rantangan rutin untuk keluarga atau kantor', href: WA_LINKS.harian },
@@ -26,7 +27,7 @@ export default function OrderChannels() {
         <div className="wa-primary-card reveal">
           <div className="wa-primary-left">
             <div className="platform-icon-circle wa-bg">
-              <MessageSquareText size={30} color="#fff" />
+              <WhatsAppIcon size={30} />
             </div>
             <div>
               <span className="wa-primary-badge">ADMIN DAPUR UMI ANDREW</span>
@@ -47,7 +48,7 @@ export default function OrderChannels() {
             rel="noopener noreferrer"
             className="btn btn-gold wa-primary-btn"
           >
-            <MessageSquareText size={18} /> Mulai Chat
+            <WhatsAppIcon size={18} /> Mulai Chat
           </a>
         </div>
 

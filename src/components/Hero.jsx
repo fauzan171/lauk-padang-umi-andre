@@ -1,6 +1,7 @@
 import React from 'react';
 import { HERO_IMAGE, WA_LINKS } from '../data';
-import { UtensilsCrossed, Clock, ShieldCheck, MapPin, MessageCircle, PackageCheck } from 'lucide-react';
+import { UtensilsCrossed, Clock, ShieldCheck, MapPin, PackageCheck } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn btn-gold"
             >
-              <MessageCircle size={17} /> Konsultasi Catering
+              <WhatsAppIcon size={17} /> Konsultasi Catering
             </a>
             <a href="#menu-harian" className="btn btn-outline-dark">
               <UtensilsCrossed size={17} /> Lihat Menu Harian

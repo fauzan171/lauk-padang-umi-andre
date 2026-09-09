@@ -43,6 +43,60 @@ export const WA_LINKS = {
   lokasi: waLink("Halo Umi Andrew, saya mau tanya lokasi warung dan ketersediaan menu hari ini.")
 };
 
+/* Jenis pesanan yang lewat input jumlah dulu sebelum buka WhatsApp.
+   msg(qty) menyusun isi chat — jumlah dari pengguna disisipkan otomatis. */
+export const WA_ORDER_TYPES = {
+  catering: {
+    label: "Konsultasi Catering",
+    qtyLabel: "Perkiraan porsi",
+    unit: "porsi",
+    defaultQty: 20,
+    msg: (q) => `Halo Umi Andrew, saya mau konsultasi pesanan CATERING untuk ${q} porsi. Acaranya: [jenis acara], tanggal: [..]. Boleh dibantu susun menunya?`
+  },
+  nasiKotak: {
+    label: "Nasi Kotak",
+    qtyLabel: "Jumlah kotak",
+    unit: "kotak",
+    defaultQty: 20,
+    msg: (q) => `Halo Umi Andrew, saya mau pesan NASI KOTAK untuk [kantor/acara], ${q} kotak, tanggal: [..].`
+  },
+  prasmanan: {
+    label: "Prasmanan / Buffet",
+    qtyLabel: "Perkiraan jumlah tamu",
+    unit: "tamu",
+    defaultQty: 30,
+    msg: (q) => `Halo Umi Andrew, saya mau tanya paket PRASMANAN/BUFFET untuk ${q} tamu di [lokasi acara], tanggal: [..].`
+  },
+  harian: {
+    label: "Catering Harian",
+    qtyLabel: "Jumlah porsi per hari",
+    unit: "porsi/hari",
+    defaultQty: 10,
+    msg: (q) => `Halo Umi Andrew, saya mau tanya CATERING HARIAN/RANTANGAN untuk ${q} porsi per hari ([keluarga/kantor]).`
+  },
+  laukPadang: {
+    label: "Lauk Padang",
+    qtyLabel: "Jumlah porsi",
+    unit: "porsi",
+    defaultQty: 20,
+    msg: (q) => `Halo Umi Andrew, saya mau pesan LAUK PADANG untuk acara (rendang/ayam pop/gulai), ${q} porsi, tanggal: [..].`
+  },
+  menuHarian: {
+    label: "Menu Harian Warung",
+    qtyLabel: "Jumlah porsi",
+    unit: "porsi",
+    defaultQty: 1,
+    msg: (q) => `Halo Umi Andrew, saya mau pesan menu harian untuk ${q} porsi, untuk dikirim/diambil.`
+  }
+};
+
+/* href -> key, buat delegasi klik: link wa.me mana yang dapat input jumlah */
+export const WA_HREF_TO_KEY = Object.fromEntries(
+  Object.entries(WA_LINKS)
+    .filter(([key]) => key in WA_ORDER_TYPES)
+    .map(([key, href]) => [href, key])
+);
+
 /* Menu yang memang tersedia tiap hari di warung. Harga tidak ditampilkan
    karena mengikuti porsi dan kesepakatan — diarahkan ke WhatsApp. */
 export const DAILY_MENU_GROUPS = [

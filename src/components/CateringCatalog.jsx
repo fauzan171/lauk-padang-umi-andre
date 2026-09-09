@@ -1,6 +1,7 @@
 import React from 'react';
 import { CATERING_CATALOG, CATERING_FAQ, WA_LINKS, RESTAURANT_INFO } from '../data';
-import { MessageCircle, Plus } from 'lucide-react';
+import { Plus } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CateringCatalog() {
   return (
@@ -69,7 +70,7 @@ export default function CateringCatalog() {
             rel="noopener noreferrer"
             className="btn btn-gold"
           >
-            <MessageCircle size={18} /> Request Lauk Khusus
+            <WhatsAppIcon size={18} /> Request Lauk Khusus
           </a>
         </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { CATERING_TYPES, CATERING_PACKAGES, CATERING_STEPS, WA_LINKS } from '../data';
-import { MessageCircle, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CateringServices() {
   return (
@@ -33,7 +34,7 @@ export default function CateringServices() {
                 rel="noopener noreferrer"
                 className="ctype-btn"
               >
-                <MessageCircle size={15} /> Tanya via WhatsApp
+                <WhatsAppIcon size={15} /> Tanya via WhatsApp
               </a>
             </article>
           ))}
