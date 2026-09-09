@@ -6,12 +6,12 @@ export default function CateringCatalog() {
   return (
     <section className="section-catering-catalog" id="katalog-lauk">
       <div className="container">
-        <div className="section-header text-center">
+        <div className="section-header text-center reveal">
           <span className="eyebrow-text">KATALOG LAUK CATERING</span>
           <h2 className="section-heading">Daftar lauk yang biasa kami masak untuk pesanan</h2>
           <div className="gold-divider center-div"></div>
           <p className="section-desc">
-            Ini bukan daftar stok harian, melainkan lauk yang bisa dipesan untuk katering. Gabungan masakan Padang dan lauk rumahan, supaya satu acara bisa mengakomodasi selera semua tamu.
+            Lauk yang bisa dipesan untuk katering — gabungan Padang dan rumahan, selera semua tamu terwakili.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function CateringCatalog() {
             const rest = group.items.filter((item) => !item.image);
 
             return (
-              <div className="catalog-group" key={group.id}>
+              <div className="catalog-group reveal" key={group.id}>
                 <div className="catalog-group-head">
                   <h3>{group.title}</h3>
                   <p>{group.note}</p>
@@ -58,10 +58,10 @@ export default function CateringCatalog() {
           })}
         </div>
 
-        <div className="catalog-cta-strip">
+        <div className="catalog-cta-strip reveal">
           <div>
             <h4>Tidak menemukan lauk yang dicari?</h4>
-            <p>Sebutkan saja lewat WhatsApp. Menu di luar katalog tetap bisa dibicarakan.</p>
+            <p>Sebutkan lewat WhatsApp — menu di luar katalog bisa dibicarakan.</p>
           </div>
           <a
             href={WA_LINKS.laukPadang}
@@ -73,8 +73,8 @@ export default function CateringCatalog() {
           </a>
         </div>
 
-        <div className="catalog-faq-block">
-          <div className="section-header text-center">
+        <div className="catalog-faq-block reveal">
+          <div className="section-header text-center reveal">
             <span className="eyebrow-text">PERTANYAAN YANG SERING MASUK</span>
             <h2 className="section-heading-sm">Soal katering di Umi Andrew</h2>
           </div>

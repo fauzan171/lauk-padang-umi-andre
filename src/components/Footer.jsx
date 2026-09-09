@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="brand-name-text">UMI ANDREW</span>
           </div>
           <p className="footer-lead">
-            Catering masakan Padang dan lauk rumahan di kawasan Cawang. Melayani nasi kotak kantor, acara keluarga, dan prasmanan dengan lauk serta harga yang bisa disesuaikan permintaan. Warung harian kami buka setiap hari.
+            Catering masakan Padang dan lauk rumahan di Cawang — nasi kotak, acara keluarga, prasmanan. Warung harian buka setiap hari.
           </p>
           <div className="halal-stamp">
             <span className="stamp-icon"><Check size={14} /></span>

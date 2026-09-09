@@ -29,13 +29,13 @@ export default function Testimonials() {
   return (
     <section className="section-testi">
       <div className="container">
-        <div className="section-header text-center">
+        <div className="section-header text-center reveal">
           <span className="eyebrow-text">CATATAN PELANGGAN</span>
           <h2 className="section-heading">Dari pesanan catering sampai makan siang harian</h2>
           <div className="gold-divider center-div"></div>
         </div>
 
-        <div className="testimonials-grid">
+        <div className="testimonials-grid reveal-group">
           {reviews.map((rev, idx) => (
             <div className="review-card" key={idx}>
               <div className="star-row">

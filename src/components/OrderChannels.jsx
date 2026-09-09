@@ -14,16 +14,16 @@ export default function OrderChannels() {
   return (
     <section className="section-order" id="order">
       <div className="container">
-        <div className="section-header text-center">
+        <div className="section-header text-center reveal">
           <span className="eyebrow-text">SEMUA PESANAN LEWAT SATU JALUR</span>
           <h2 className="section-heading">Chat WhatsApp admin langsung</h2>
           <div className="gold-divider center-div"></div>
           <p className="section-desc">
-            Tidak ada aplikasi perantara. Lauk, jumlah porsi, jam kirim, dan harganya dibicarakan langsung dengan admin — jadi pesanan katering bisa disesuaikan permintaan, bukan dipaksa masuk paket yang sudah jadi.
+            Tanpa aplikasi perantara. Porsi, jam kirim, dan harga dibicarakan langsung dengan admin.
           </p>
         </div>
 
-        <div className="wa-primary-card">
+        <div className="wa-primary-card reveal">
           <div className="wa-primary-left">
             <div className="platform-icon-circle wa-bg">
               <MessageSquareText size={30} color="#fff" />
@@ -51,7 +51,7 @@ export default function OrderChannels() {
           </a>
         </div>
 
-        <div className="wa-quicklinks">
+        <div className="wa-quicklinks reveal-group">
           {QUICK_LINKS.map((link) => {
             const Icon = link.icon;
             return (

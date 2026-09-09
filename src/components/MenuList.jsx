@@ -6,19 +6,19 @@ export default function MenuList({ onSelectItem }) {
   return (
     <section className="section-menu" id="menu-harian">
       <div className="container">
-        <div className="section-header text-center">
+        <div className="section-header text-center reveal">
           <span className="eyebrow-text">MENU HARIAN WARUNG</span>
           <h2 className="section-heading">Yang siap tiap hari di warung</h2>
           <div className="gold-divider center-div"></div>
           <p className="section-desc">
-            Enam menu ini yang memang kami masak dan sedia setiap hari. Untuk lauk Padang dalam jumlah banyak — rendang, ayam pop, gulai — silakan lewat jalur catering supaya dimasak bertahap mengikuti jadwal acara.
+            Sedia setiap hari. Untuk lauk Padang jumlah banyak — rendang, ayam pop, gulai — lewat jalur catering.
           </p>
           <p className="section-price-note">
-            Harga mengikuti porsi dan pesanan, jadi tidak kami cantumkan di sini. Sebutkan menu yang dimau lewat WhatsApp atau aplikasi.
+            Harga mengikuti porsi. Sebutkan menunya lewat WhatsApp.
           </p>
         </div>
 
-        <div className="daily-groups">
+        <div className="daily-groups reveal-group">
           {DAILY_MENU_GROUPS.map((group) => (
             <div className="daily-group" key={group.id}>
               <div className="daily-group-head">
@@ -52,10 +52,10 @@ export default function MenuList({ onSelectItem }) {
           ))}
         </div>
 
-        <div className="catering-alert-box">
+        <div className="catering-alert-box reveal">
           <div className="catering-text">
-            <h3>Butuh dalam jumlah banyak, atau mau lauk Padang lengkap?</h3>
-            <p>Pindah ke jalur catering: nasi kotak, prasmanan, dan acara keluarga dengan lauk serta harga yang bisa disesuaikan permintaan.</p>
+            <h3>Butuh porsi banyak atau lauk Padang lengkap?</h3>
+            <p>Pindah ke jalur catering — lauk dan harga menyesuaikan permintaan.</p>
           </div>
           <div className="catering-alert-actions">
             <a href="#katalog-lauk" className="btn btn-outline-dark">

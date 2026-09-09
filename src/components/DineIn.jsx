@@ -6,33 +6,33 @@ export default function DineIn() {
   return (
     <section className="section-dinein" id="dinein">
       <div className="container">
-        <div className="dinein-card-banner">
+        <div className="dinein-card-banner reveal">
           <div className="dinein-header-content text-center">
             <span className="eyebrow-text gold-text">MAKAN DI WARUNG</span>
             <h2 className="section-heading light-heading">Mampir sebentar, makan panas, lanjut lagi</h2>
             <div className="gold-divider center-div"></div>
             <p className="dinein-description">
-              Warung kami sederhana, bukan rumah makan Padang besar dengan deretan etalase. Yang tersedia tiap hari adalah paket nasi dengan cumi cabe ijo atau ayam suwir balado plus telur dadar barendo, lalu kwetiaw goreng, nasi goreng, mie goreng, dan mie rebus. Semuanya bisa dimakan di tempat atau dibungkus.
+              Warung sederhana, menu tetap tuntas: paket nasi dengan dadar barendo, kwetiaw, nasi goreng, mie goreng, dan mie rebus. Makan di tempat atau dibungkus.
             </p>
           </div>
 
-          <div className="dinein-perks-grid">
+          <div className="dinein-perks-grid reveal-group">
             <div className="dinein-perk-item">
               <div className="perk-icon-circle"><UtensilsCrossed size={24} /></div>
               <h4>Dimasak Per Pesanan</h4>
-              <p>Mie, kwetiaw, dan nasi goreng dibuat saat dipesan supaya masih panas. Tingkat pedas dan tambahan telur bisa diminta.</p>
+              <p>Dibuat saat dipesan — sampai masih panas. Pedas dan telur bisa diminta.</p>
             </div>
 
             <div className="dinein-perk-item">
               <div className="perk-icon-circle"><Wind size={24} /></div>
               <h4>Ruang Makan Ringkas</h4>
-              <p>Meja disiapkan untuk makan cepat di sela kerja, atau untuk menunggu pesanan dibungkus dan diambil.</p>
+              <p>Untuk makan cepat di sela kerja, atau menunggu pesanan dibungkus.</p>
             </div>
 
             <div className="dinein-perk-item">
               <div className="perk-icon-circle"><Car size={24} /></div>
               <h4>Akses Cawang</h4>
-              <p>Di jalur Dewi Sartika, dekat area kantor, halte, dan rute pulang kerja Jakarta Timur.</p>
+              <p>Jalur Dewi Sartika, dekat halte dan rute pulang kerja.</p>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ export default function DineIn() {
             <div className="booking-info">
               <div className="booking-title">Mau ambil pesanan catering di warung?</div>
               <p className="booking-subtitle">
-                Chat dulu supaya lauk siap saat Anda tiba, atau sekalian atur pengiriman ke lokasi acara di Cawang dan sekitarnya.
+                Chat dulu supaya lauk siap saat Anda tiba.
               </p>
             </div>
             <a

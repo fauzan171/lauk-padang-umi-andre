@@ -104,29 +104,29 @@ export const CATERING_TYPES = [
   {
     id: "nasi-kotak",
     title: "Nasi Kotak Kantor & Rapat",
-    desc: "Untuk makan siang tim, meeting, training, atau acara kantor di sekitar Cawang. Lauk dikemas terpisah supaya tidak tumpah dan tetap rapi sampai tujuan.",
-    points: ["Jadwal kirim bisa diatur per jam", "Lauk, kuah, dan sambal dipisah", "Label nama penerima bila perlu"],
+    desc: "Makan siang tim dan meeting. Lauk dikemas terpisah, rapi sampai tujuan.",
+    points: ["Jadwal kirim diatur per jam", "Lauk, kuah, sambal dipisah", "Label nama bila perlu"],
     wa: "nasiKotak"
   },
   {
     id: "acara-keluarga",
     title: "Acara Keluarga & Syukuran",
-    desc: "Arisan, ulang tahun, akikah, pengajian, dan syukuran rumah. Porsi ramean dengan lauk Padang yang biasa jadi hidangan utama acara.",
-    points: ["Menu bisa disusun mengikuti budget", "Rendang & ayam pop untuk porsi besar", "Bisa diambil sendiri atau diantar"],
+    desc: "Arisan, ulang tahun, akikah, pengajian. Porsi ramean dengan lauk andalan.",
+    points: ["Menu disusun ikut budget", "Rendang & ayam pop porsi besar", "Bisa diantar atau diambil"],
     wa: "catering"
   },
   {
     id: "prasmanan",
     title: "Prasmanan / Buffet",
-    desc: "Beberapa lauk disajikan prasmanan untuk acara di rumah atau gedung. Kami bantu tentukan kombinasi lauk supaya tidak saling menutupi rasa.",
-    points: ["Kombinasi lauk kering & berkuah", "Peralatan saji bisa dibicarakan", "Cocok untuk tamu 30 orang ke atas"],
+    desc: "Lauk disajikan buffet untuk acara di rumah atau gedung. Kami bantu susun kombinasinya.",
+    points: ["Lauk kering & berkuah", "Peralatan saji bisa dibicarakan", "Cocok untuk 30 orang ke atas"],
     wa: "prasmanan"
   },
   {
     id: "harian",
     title: "Catering Harian & Rantangan",
-    desc: "Langganan makan rutin untuk keluarga, anak kos, atau tim kecil. Menu berganti tiap hari supaya tidak bosan, tetap masakan rumahan.",
-    points: ["Menu berganti harian", "Bisa atur jadwal mingguan", "Porsi menyesuaikan kebutuhan"],
+    desc: "Langganan rutin keluarga, anak kos, atau tim kecil. Menu berganti tiap hari.",
+    points: ["Menu berganti harian", "Jadwal mingguan bisa diatur", "Porsi menyesuaikan"],
     wa: "harian"
   }
 ];
@@ -163,22 +163,22 @@ export const CATERING_STEPS = [
   {
     step: "01",
     title: "Ceritakan Kebutuhannya",
-    desc: "Chat admin: jenis acara, jumlah porsi, tanggal, jam, dan lokasi pengiriman. Belum punya gambaran menu juga tidak apa-apa."
+    desc: "Chat admin: acara, porsi, tanggal, lokasi. Belum punya gambaran menu juga tidak apa-apa."
   },
   {
     step: "02",
     title: "Kami Susun Menu & Biayanya",
-    desc: "Admin mengusulkan kombinasi lauk dan sayur yang masuk budget. Lauk dan harga bisa disesuaikan permintaan, jadi boleh minta diubah."
+    desc: "Admin mengusulkan kombinasi lauk yang masuk budget. Boleh minta diubah."
   },
   {
     step: "03",
     title: "Konfirmasi & Jadwal Dapur",
-    desc: "Setelah menu disepakati, pesanan masuk jadwal dapur. Untuk porsi besar sebaiknya dikonfirmasi lebih awal supaya lauk dimasak bertahap."
+    desc: "Menu disepakati, pesanan masuk jadwal dapur. Porsi besar dikonfirmasi lebih awal."
   },
   {
     step: "04",
     title: "Diantar atau Diambil",
-    desc: "Bisa diantar ke area Cawang dan sekitarnya lewat kurir instan, atau diambil sendiri di warung pada jam yang disepakati."
+    desc: "Diantar lewat kurir instan area Cawang, atau ambil sendiri di warung."
   }
 ];
 
@@ -188,29 +188,29 @@ export const CATERING_CATALOG = [
   {
     id: "lauk-padang",
     title: "Lauk Padang & Minang",
-    note: "Bumbu pekat dan santan harum. Kelompok ini yang paling sering diminta untuk nasi kotak, prasmanan, dan acara keluarga.",
+    note: "Paling sering diminta untuk nasi kotak, prasmanan, dan acara keluarga.",
     items: [
       {
         name: "Rendang Daging Sapi Hitam",
-        desc: "Daging dimasak lama dengan santan, cabai, serai, lengkuas, dan daun jeruk sampai bumbu mengering dan gelap. Tahan lama, jadi paling aman untuk porsi besar dan pengiriman jauh.",
+        desc: "Dimasak lama sampai bumbu mengering dan gelap. Tahan lama — paling aman untuk porsi besar.",
         tag: "Paling Laris",
         image: commonsImage("Rendang daging sapi asli Padang.JPG")
       },
       {
         name: "Ayam Pop Sambal Merah",
-        desc: "Ayam ungkep air kelapa dan bawang putih, digoreng sebentar supaya tetap lembut, disajikan dengan sambal merah segar.",
+        desc: "Ungkep air kelapa, digoreng sebentar tetap lembut, disajikan dengan sambal merah segar.",
         tag: "Menu Andalan",
         image: commonsImage("Ayam Pop 1.jpg")
       },
       {
         name: "Dendeng Balado Merah",
-        desc: "Irisan daging tipis digoreng kering lalu dilumuri cabai merah balado. Pedasnya bersih dan tidak menutupi gurih daging.",
+        desc: "Irisan tipis goreng kering dilumuri balado. Pedasnya bersih, gurih daging tetap terasa.",
         tag: "Pedas Nagih",
         image: commonsImage("Dendeng balado.JPG")
       },
       {
         name: "Telur Dadar Barendo",
-        desc: "Telur dadar tebal berbumbu daun bawang dan cabai, digoreng sampai pinggirannya berenda garing. Lauk pendamping yang hampir selalu ada di setiap kotak.",
+        desc: "Dadar tebal berbumbu, pinggiran berenda garing. Pendamping hampir semua kotak.",
         tag: "Pendamping Wajib",
         image: commonsImage("Nasi Padang Rendang Telur.jpg")
       },
@@ -239,11 +239,11 @@ export const CATERING_CATALOG = [
   {
     id: "lauk-rumahan",
     title: "Lauk Rumahan Nusantara",
-    note: "Untuk pelanggan yang butuh hidangan lebih netral dan tidak terlalu pedas — biasanya dipakai supaya satu acara bisa dinikmati semua tamu.",
+    note: "Pilihan netral, tidak terlalu pedas — supaya semua tamu bisa makan.",
     items: [
       {
         name: "Ayam Goreng Lengkuas",
-        desc: "Ayam ungkep bumbu lengkuas, digoreng kering dengan taburan serundeng. Lauk aman yang disukai hampir semua usia.",
+        desc: "Ungkep lengkuas, goreng kering, taburan serundeng. Lauk aman untuk semua umur.",
         tag: "Favorit Anak",
         image: commonsImage("Ayam bakar Aie Badarun.JPG")
       },
@@ -270,11 +270,11 @@ export const CATERING_CATALOG = [
   {
     id: "nasi-mie",
     title: "Nasi, Mie & Kwetiaw",
-    note: "Menu warung harian kami yang juga bisa dipesan dalam jumlah banyak untuk acara santai, rapat informal, atau konsumsi malam.",
+    note: "Menu harian warung, bisa dipesan jumlah banyak untuk acara santai.",
     items: [
       {
         name: "Nasi Goreng Porsi Besar",
-        desc: "Nasi goreng bumbu rumahan yang juga jadi menu harian warung. Bisa dipesan banyak untuk acara santai.",
+        desc: "Bumbu rumahan, menu harian warung. Bisa dipesan banyak untuk acara santai.",
         tag: "Menu Harian",
         image: commonsImage("Masakan padang.jpg")
       },
@@ -290,11 +290,11 @@ export const CATERING_CATALOG = [
   {
     id: "pelengkap",
     title: "Sayur, Sambal & Pelengkap",
-    note: "Bagian yang bikin satu kotak terasa lengkap. Semua bisa diminta terpisah supaya tidak bercampur saat pengiriman.",
+    note: "Bikin satu kotak terasa lengkap. Bisa diminta terpisah.",
     items: [
       {
         name: "Gulai Nangka & Daun Singkong",
-        desc: "Sayur wajib nasi Padang: gulai nangka muda dan daun singkong rebus berbumbu. Kuahnya bisa dikemas terpisah.",
+        desc: "Sayur wajib nasi Padang. Kuah bisa dikemas terpisah.",
         tag: "Pelengkap Khas",
         image: commonsImage("Nasi Padang With beef rendang.jpg")
       },

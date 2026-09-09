@@ -6,16 +6,15 @@ export default function CateringServices() {
   return (
     <section className="section-catering-services" id="layanan-catering">
       <div className="container">
-        <div className="section-header text-center">
-          <span className="eyebrow-text">JENIS PESANAN YANG KAMI LAYANI</span>
+        <div className="section-header text-center reveal">
           <h2 className="section-heading">Dari nasi kotak kantor sampai prasmanan</h2>
           <div className="gold-divider center-div"></div>
           <p className="section-desc">
-            Empat bentuk pesanan yang paling sering masuk ke dapur kami. Semuanya bisa diatur lauknya, jumlahnya, dan jam pengirimannya.
+            Empat bentuk pesanan yang paling sering masuk dapur. Lauk, jumlah, dan jam kirim semuanya bisa diatur.
           </p>
         </div>
 
-        <div className="catering-types-grid">
+        <div className="catering-types-grid reveal-group">
           {CATERING_TYPES.map((type) => (
             <article className="ctype-card" key={type.id}>
               <h3 className="ctype-title">{type.title}</h3>
@@ -41,15 +40,15 @@ export default function CateringServices() {
         </div>
 
         <div className="packages-block">
-          <div className="section-header text-center">
+          <div className="section-header text-center reveal">
             <span className="eyebrow-text">SUSUNAN ISI KOTAK</span>
             <h2 className="section-heading-sm">Pilihan isi nasi kotak</h2>
             <p className="section-desc">
-              Harga tidak dipatok di sini karena mengikuti lauk yang dipilih dan jumlah porsi. Setelah menu disepakati, admin menghitung totalnya langsung di WhatsApp.
+              Harga mengikuti lauk yang dipilih dan jumlah porsi. Total dihitung langsung di WhatsApp.
             </p>
           </div>
 
-          <div className="packages-grid">
+          <div className="packages-grid reveal-group">
             {CATERING_PACKAGES.map((pkg) => (
               <div
                 className={`package-card ${pkg.featured ? 'package-card-featured' : ''}`}
@@ -70,12 +69,12 @@ export default function CateringServices() {
         </div>
 
         <div className="steps-block">
-          <div className="section-header text-center">
+          <div className="section-header text-center reveal">
             <span className="eyebrow-text">CARA PESAN</span>
             <h2 className="section-heading-sm">Empat langkah dari chat sampai makanan tiba</h2>
           </div>
 
-          <div className="steps-row">
+          <div className="steps-row reveal-group">
             {CATERING_STEPS.map((item) => (
               <div className="step-card" key={item.step}>
                 <span className="step-number">{item.step}</span>

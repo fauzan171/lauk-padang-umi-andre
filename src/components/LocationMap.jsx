@@ -6,14 +6,14 @@ export default function LocationMap() {
   return (
     <section className="section-location" id="lokasi">
       <div className="container">
-        <div className="location-split-grid">
+        <div className="location-split-grid reveal-group">
           <div className="location-info-side">
             <span className="eyebrow-text">LOKASI STRATEGIS CAWANG</span>
             <h2 className="section-heading">Kunjungi Warung Umi Andrew</h2>
             <div className="gold-divider"></div>
             
             <p className="narrative-text">
-              Berlokasi di jalan protokol Dewi Sartika Cawang, mudah dijangkau dari arah Tebet, Pancoran, Kampung Melayu, Halim, maupun Cililitan. Titik ini juga jadi tempat pengambilan pesanan catering, sekaligus pangkal pengiriman ke area sekitarnya.
+              Di jalan Dewi Sartika Cawang — mudah dijangkau dari Tebet, Pancoran, Kampung Melayu, Halim, dan Cililitan. Sekalian titik ambil pesanan catering.
             </p>
 
             <div className="location-details-list">

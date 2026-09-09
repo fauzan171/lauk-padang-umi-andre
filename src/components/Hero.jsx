@@ -5,8 +5,6 @@ import { UtensilsCrossed, Clock, ShieldCheck, MapPin, MessageCircle, PackageChec
 export default function Hero() {
   return (
     <section className="hero-section" id="hero">
-      <div className="hero-dark-overlay"></div>
-
       <div className="container hero-content-grid">
         <div className="hero-text-col">
           <div className="hero-badge-pill">
@@ -20,7 +18,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-paragraph">
-            Melayani nasi kotak kantor, acara keluarga, sampai prasmanan di kawasan Cawang dan sekitarnya. Menunya tidak dikunci — sebutkan jumlah porsi dan budget, kami susun kombinasi lauk Padang dan lauk rumahan yang pas. Warung kami juga buka tiap hari untuk menu mie, nasi goreng, dan paket nasi.
+            Nasi kotak kantor, acara keluarga, sampai prasmanan — lauk dan harganya disusun mengikuti porsi dan budget Anda.
           </p>
 
           <div className="hero-cta-row">
@@ -32,7 +30,7 @@ export default function Hero() {
             >
               <MessageCircle size={17} /> Konsultasi Catering
             </a>
-            <a href="#menu-harian" className="btn btn-outline-light">
+            <a href="#menu-harian" className="btn btn-outline-dark">
               <UtensilsCrossed size={17} /> Lihat Menu Harian
             </a>
           </div>

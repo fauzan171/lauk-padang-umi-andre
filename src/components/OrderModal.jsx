@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { WA_LINKS } from '../data';
 import { X, MessageCircle } from 'lucide-react';
 
 export default function OrderModal({ item, onClose }) {
+  const closeBtnRef = useRef(null);
+
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && onClose();
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    closeBtnRef.current?.focus();
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
   if (!item) return null;
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
+    <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label={item.name}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <div className="modal-top">
           <div className="modal-header-info">
             <span className="modal-category">Menu Harian Warung</span>
             <h3 className="modal-dish-title">{item.name}</h3>
           </div>
-          <button className="btn-modal-close" onClick={onClose} aria-label="Tutup Modal">
+          <button ref={closeBtnRef} className="btn-modal-close" onClick={onClose} aria-label="Tutup Modal">
             <X size={20} />
           </button>
         </div>

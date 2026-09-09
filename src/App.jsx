@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CateringHub from './components/CateringHub';
@@ -19,11 +19,33 @@ import './App.css';
 export default function App() {
   const [selectedItem, setSelectedItem] = useState(null);
 
+  /* Napas: reveal-on-scroll. Satu observer untuk seluruh halaman,
+     elemen cukup membawa class "reveal". `once` — tidak bolak-balik. */
+  useEffect(() => {
+    const els = document.querySelectorAll('.reveal, .reveal-group');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach((el) => el.classList.add('revealed'));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div className="padang-theme-app">
       <Navbar />
       <Hero />
-      <div className="songket-separator-line"></div>
       <CateringHub />
       <CateringServices />
       <CateringCatalog />
