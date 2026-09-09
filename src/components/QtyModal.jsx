@@ -3,11 +3,19 @@ import { WA_ORDER_TYPES } from '../data';
 import { Minus, Plus } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
-/* Modal input jumlah: muncul sebelum buka WhatsApp, pesan final
-   menyusun ulang teks chat berdasarkan jumlah yang diisi. */
+const fmtDate = (iso) => {
+  if (!iso) return null;
+  const d = new Date(`${iso}T00:00:00`);
+  return isNaN(d) ? null : d.toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+};
+
+/* Modal input pesanan: jumlah, jenis acara, dan tanggal sebelum buka
+   WhatsApp. Pesan final disusun ulang dari isi form. */
 export default function QtyModal({ orderKey, onCancel }) {
   const type = WA_ORDER_TYPES[orderKey];
   const [qty, setQty] = useState(type.defaultQty);
+  const [event, setEvent] = useState('');
+  const [date, setDate] = useState('');
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -25,8 +33,12 @@ export default function QtyModal({ orderKey, onCancel }) {
   if (!type) return null;
 
   const clamp = (v) => Math.max(1, Math.min(9999, v || 1));
+  const dateOk = !type.date || date === '' || date !== '';
+  const canSend = qty !== '' && dateOk;
+  const dateStr = fmtDate(date);
+
   const openWa = () => {
-    const url = `https://wa.me/6285720337580?text=${encodeURIComponent(type.msg(clamp(qty)))}`;
+    const url = `https://wa.me/6285720337580?text=${encodeURIComponent(type.msg(clamp(qty), event.trim(), dateStr))}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     onCancel();
   };
@@ -75,16 +87,53 @@ export default function QtyModal({ orderKey, onCancel }) {
             </button>
           </div>
 
+          {type.event && (
+            <>
+              <label className="qty-label" htmlFor="event-input">
+                {type.event.label} <span className="qty-optional">(boleh diisi nanti)</span>
+              </label>
+              <input
+                id="event-input"
+                type="text"
+                className="qty-text-input"
+                placeholder={type.event.placeholder}
+                maxLength={60}
+                value={event}
+                onChange={(e) => setEvent(e.target.value)}
+              />
+            </>
+          )}
+
+          {type.date && (
+            <>
+              <label className="qty-label" htmlFor="date-input">
+                Tanggal acara / pengiriman <span className="qty-optional">(boleh diisi nanti)</span>
+              </label>
+              <input
+                id="date-input"
+                type="date"
+                className="qty-text-input"
+                value={date}
+                min={new Date().toISOString().slice(0, 10)}
+                onChange={(e) => setDate(e.target.value)}
+              />
+            </>
+          )}
+
           <div className="qty-preview">
             <span className="qty-preview-label">Pesan yang akan dikirim:</span>
-            <p className="qty-preview-text">{type.msg(clamp(qty))}</p>
+            <p className="qty-preview-text">{type.msg(clamp(qty), event.trim(), dateStr)}</p>
           </div>
 
-          <button className="modal-channel-btn qty-send-btn" onClick={openWa} disabled={!qty}>
+          <button className="modal-channel-btn qty-send-btn" onClick={openWa} disabled={!canSend}>
             <div className="channel-icon-mini"><WhatsAppIcon size={18} /></div>
             <div className="channel-txt">
               <strong>Kirim via WhatsApp</strong>
-              <span>{clamp(qty)} {type.unit} — lanjut ke chat admin</span>
+              <span>
+                {clamp(qty)} {type.unit}
+                {event.trim() ? ` • ${event.trim()}` : ''}
+                {dateStr ? ` • ${dateStr}` : ''}
+              </span>
             </div>
           </button>
         </div>

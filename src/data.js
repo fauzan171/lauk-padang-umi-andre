@@ -44,48 +44,61 @@ export const WA_LINKS = {
 };
 
 /* Jenis pesanan yang lewat input jumlah dulu sebelum buka WhatsApp.
-   msg(qty) menyusun isi chat — jumlah dari pengguna disisipkan otomatis. */
+   msg(qty, event, date) menyusun isi chat — input pengguna disisipkan
+   otomatis. `event` = field teks opsional-terisi, `date` = pakai tanggal. */
 export const WA_ORDER_TYPES = {
   catering: {
     label: "Konsultasi Catering",
     qtyLabel: "Perkiraan porsi",
     unit: "porsi",
     defaultQty: 20,
-    msg: (q) => `Halo Umi Andrew, saya mau konsultasi pesanan CATERING untuk ${q} porsi. Acaranya: [jenis acara], tanggal: [..]. Boleh dibantu susun menunya?`
+    event: { label: "Jenis acara", placeholder: "misal: akikah, rapat kantor, ulang tahun" },
+    date: true,
+    msg: (q, ev, d) => `Halo Umi Andrew, saya mau konsultasi pesanan CATERING untuk ${q} porsi. Acara: ${ev || "[jenis acara]"}, tanggal: ${d || "[belum ditentukan]"}. Boleh dibantu susun menunya?`
   },
   nasiKotak: {
     label: "Nasi Kotak",
     qtyLabel: "Jumlah kotak",
     unit: "kotak",
     defaultQty: 20,
-    msg: (q) => `Halo Umi Andrew, saya mau pesan NASI KOTAK untuk [kantor/acara], ${q} kotak, tanggal: [..].`
+    event: { label: "Untuk acara / kantor", placeholder: "misal: meeting tim, training, arisan" },
+    date: true,
+    msg: (q, ev, d) => `Halo Umi Andrew, saya mau pesan NASI KOTAK untuk ${ev || "[kantor/acara]"}, ${q} kotak, tanggal: ${d || "[belum ditentukan]"}.`
   },
   prasmanan: {
     label: "Prasmanan / Buffet",
     qtyLabel: "Perkiraan jumlah tamu",
     unit: "tamu",
     defaultQty: 30,
-    msg: (q) => `Halo Umi Andrew, saya mau tanya paket PRASMANAN/BUFFET untuk ${q} tamu di [lokasi acara], tanggal: [..].`
+    event: { label: "Jenis acara", placeholder: "misal: syukuran rumah, pengajian, resepsi" },
+    date: true,
+    msg: (q, ev, d) => `Halo Umi Andrew, saya mau tanya paket PRASMANAN/BUFFET untuk ${q} tamu. Acara: ${ev || "[jenis acara]"}, tanggal: ${d || "[belum ditentukan]"}, lokasi: [lokasi acara].`
   },
   harian: {
     label: "Catering Harian",
     qtyLabel: "Jumlah porsi per hari",
     unit: "porsi/hari",
     defaultQty: 10,
-    msg: (q) => `Halo Umi Andrew, saya mau tanya CATERING HARIAN/RANTANGAN untuk ${q} porsi per hari ([keluarga/kantor]).`
+    event: { label: "Untuk", placeholder: "misal: keluarga, kantor, anak kos" },
+    date: false,
+    msg: (q, ev) => `Halo Umi Andrew, saya mau tanya CATERING HARIAN/RANTANGAN untuk ${q} porsi per hari (${ev || "[keluarga/kantor]"}).`
   },
   laukPadang: {
     label: "Lauk Padang",
     qtyLabel: "Jumlah porsi",
     unit: "porsi",
     defaultQty: 20,
-    msg: (q) => `Halo Umi Andrew, saya mau pesan LAUK PADANG untuk acara (rendang/ayam pop/gulai), ${q} porsi, tanggal: [..].`
+    event: null,
+    date: true,
+    msg: (q, _ev, d) => `Halo Umi Andrew, saya mau pesan LAUK PADANG untuk acara (rendang/ayam pop/gulai), ${q} porsi, tanggal: ${d || "[belum ditentukan]"}.`
   },
   menuHarian: {
     label: "Menu Harian Warung",
     qtyLabel: "Jumlah porsi",
     unit: "porsi",
     defaultQty: 1,
+    event: null,
+    date: false,
     msg: (q) => `Halo Umi Andrew, saya mau pesan menu harian untuk ${q} porsi, untuk dikirim/diambil.`
   }
 };
