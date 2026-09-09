@@ -1,6 +1,6 @@
 import React from 'react';
-import { RESTAURANT_INFO, WA_LINKS } from '../data';
-import { X, Bike, Truck, MessageCircle } from 'lucide-react';
+import { WA_LINKS } from '../data';
+import { X, MessageCircle } from 'lucide-react';
 
 export default function OrderModal({ item, onClose }) {
   if (!item) return null;
@@ -30,11 +30,11 @@ export default function OrderModal({ item, onClose }) {
               </ul>
             )}
             <p className="modal-price-note">
-              Harga mengikuti porsi dan pesanan — sebutkan langsung ke admin atau cek di aplikasi.
+              Harga mengikuti porsi dan pesanan — sebutkan langsung ke admin lewat WhatsApp.
             </p>
           </div>
 
-          <p className="modal-prompt">Pilih cara pesan:</p>
+          <p className="modal-prompt">Pesan langsung ke admin:</p>
 
           <div className="modal-actions-list">
             <a
@@ -45,34 +45,8 @@ export default function OrderModal({ item, onClose }) {
             >
               <div className="channel-icon-mini"><MessageCircle size={18} /></div>
               <div className="channel-txt">
-                <strong>Pesan Langsung via WhatsApp</strong>
+                <strong>Pesan via WhatsApp</strong>
                 <span>Tanya harga, request pedas, atau atur jam ambil</span>
-              </div>
-            </a>
-
-            <a
-              href={RESTAURANT_INFO.gofoodUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="modal-channel-btn btn-gf"
-            >
-              <div className="channel-icon-mini"><Bike size={18} /></div>
-              <div className="channel-txt">
-                <strong>Pesan via GoFood</strong>
-                <span>Tersedia promo voucher &amp; diskon ongkir</span>
-              </div>
-            </a>
-
-            <a
-              href={RESTAURANT_INFO.grabfoodUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="modal-channel-btn btn-gr"
-            >
-              <div className="channel-icon-mini"><Truck size={18} /></div>
-              <div className="channel-txt">
-                <strong>Pesan via GrabFood</strong>
-                <span>Kemasan anti tumpah, area Cawang &amp; sekitarnya</span>
               </div>
             </a>
           </div>

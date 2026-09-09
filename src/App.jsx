@@ -12,8 +12,8 @@ import Testimonials from './components/Testimonials';
 import LocationMap from './components/LocationMap';
 import Footer from './components/Footer';
 import OrderModal from './components/OrderModal';
-import { WA_LINKS, RESTAURANT_INFO } from './data';
-import { Bike, Truck, MessageCircle } from 'lucide-react';
+import { WA_LINKS } from './data';
+import { Truck, MessageCircle } from 'lucide-react';
 import './App.css';
 
 export default function App() {
@@ -44,14 +44,6 @@ export default function App() {
           className="sticky-nav-btn btn-catering-sticky"
         >
           <MessageCircle size={16} /> Catering
-        </a>
-        <a
-          href={RESTAURANT_INFO.gofoodUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="sticky-nav-btn btn-gf-sticky"
-        >
-          <Bike size={16} /> GoFood
         </a>
         <a
           href={WA_LINKS.menuHarian}

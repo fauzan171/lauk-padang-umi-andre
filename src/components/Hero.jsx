@@ -1,6 +1,5 @@
 import React from 'react';
-import { HERO_IMAGE, RESTAURANT_INFO, WA_LINKS } from '../data';
-import { GoFoodLogo, GrabFoodLogo } from './BrandLogos';
+import { HERO_IMAGE, WA_LINKS } from '../data';
 import { UtensilsCrossed, Clock, ShieldCheck, MapPin, MessageCircle, PackageCheck } from 'lucide-react';
 
 export default function Hero() {
@@ -35,29 +34,6 @@ export default function Hero() {
             </a>
             <a href="#menu-harian" className="btn btn-outline-light">
               <UtensilsCrossed size={17} /> Lihat Menu Harian
-            </a>
-          </div>
-
-          <div className="hero-secondary-channels">
-            <span className="secondary-channels-label">PESAN SATUAN LEWAT:</span>
-            <a
-              href={RESTAURANT_INFO.gofoodUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="secondary-channel-link"
-            >
-              <GoFoodLogo height={20} />
-            </a>
-            <a
-              href={RESTAURANT_INFO.grabfoodUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="secondary-channel-link"
-            >
-              <GrabFoodLogo height={20} />
-            </a>
-            <a href="#dinein" className="secondary-channel-link channel-dinein">
-              <UtensilsCrossed size={16} /> Makan di warung
             </a>
           </div>
 

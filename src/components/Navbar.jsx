@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { RESTAURANT_INFO, WA_LINKS } from '../data';
-import { GoFoodLogo, GrabFoodLogo } from './BrandLogos';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 
 export default function Navbar() {
@@ -89,19 +88,9 @@ export default function Navbar() {
               <a href="#katalog-lauk" onClick={() => setIsOpen(false)}>Katalog Lauk</a>
               <a href="#menu-harian" onClick={() => setIsOpen(false)}>Menu Harian</a>
               <a href="#about" onClick={() => setIsOpen(false)}>Cerita Dapur</a>
-              <a href="#order" onClick={() => setIsOpen(false)}>Pesan Online</a>
+              <a href="#order" onClick={() => setIsOpen(false)}>Pesan via WhatsApp</a>
               <a href="#dinein" onClick={() => setIsOpen(false)}>Makan di Warung</a>
               <a href="#lokasi" onClick={() => setIsOpen(false)}>Lokasi & Jam Buka</a>
-            </div>
-
-            <div className="mobile-menu-actions">
-              <span className="mobile-action-label">Pesan Online Cepat:</span>
-              <a href={RESTAURANT_INFO.gofoodUrl} target="_blank" rel="noopener noreferrer" className="mobile-partner-link gf-link">
-                <GoFoodLogo height={24} />
-              </a>
-              <a href={RESTAURANT_INFO.grabfoodUrl} target="_blank" rel="noopener noreferrer" className="mobile-partner-link gr-link">
-                <GrabFoodLogo height={24} />
-              </a>
             </div>
           </div>
         </div>

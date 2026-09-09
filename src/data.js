@@ -15,6 +15,10 @@ export const RESTAURANT_INFO = {
   addressDetail: "Dekat Simpang Cawang Kompor, mudah dicapai dari Tebet, Cililitan, dan Pancoran.",
   landmark: "Dekat Simpang Cawang Kompor • 3 Menit dari Halte TransJakarta BNN & LRT Cawang",
   hours: "09.00 – 22.00 WIB (Buka Setiap Hari)",
+  /* Belum dirender di mana pun: link merchant ini belum terverifikasi dan
+     diduga placeholder. Ganti dengan URL asli dari dashboard GoFood/GrabFood,
+     lalu pasang kembali tombolnya (BrandLogos.jsx + CSS .gf-card/.gr-card
+     sengaja dipertahankan untuk itu). */
   gofoodUrl: "https://gofood.link/u/padang-umi-andrew-cawang",
   grabfoodUrl: "https://food.grab.com/id/id/restaurant/warung-makan-padang-umi-andrew-cawang",
   mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.298285741634!2d106.8606785!3d-6.2538965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3ab18bfa9fb%3A0x6b49826a7e5ea5db!2sCawang%2C%20Kec.%20Kramat%20jati%2C%20Kota%20Jakarta%20Timur!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid",

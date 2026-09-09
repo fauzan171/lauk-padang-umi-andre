@@ -51,8 +51,7 @@ export default function Footer() {
             <li><a href={WA_LINKS.nasiKotak} target="_blank" rel="noopener noreferrer">Nasi Kotak Kantor</a></li>
             <li><a href={WA_LINKS.prasmanan} target="_blank" rel="noopener noreferrer">Prasmanan Acara</a></li>
             <li><a href={WA_LINKS.harian} target="_blank" rel="noopener noreferrer">Catering Harian</a></li>
-            <li><a href={RESTAURANT_INFO.gofoodUrl} target="_blank" rel="noopener noreferrer">Order via GoFood</a></li>
-            <li><a href={RESTAURANT_INFO.grabfoodUrl} target="_blank" rel="noopener noreferrer">Order via GrabFood</a></li>
+            <li><a href={WA_LINKS.menuHarian} target="_blank" rel="noopener noreferrer">Menu Harian Warung</a></li>
           </ul>
         </div>
 
