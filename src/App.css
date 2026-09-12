@@ -134,7 +134,7 @@ ol {
 }
 
 .container {
-  width: min(100% - var(--space-8), var(--container));
+  width: min(100% - 2 * clamp(1rem, 4vw, var(--space-8)), var(--container));
   margin-inline: auto;
 }
 
@@ -347,6 +347,7 @@ ol {
   font-weight: 800;
   letter-spacing: 0.1em;
   line-height: 1;
+  white-space: nowrap;
   color: var(--text-primary);
 }
 
@@ -2245,7 +2246,7 @@ ol {
   }
 
   .padang-theme-app {
-    padding-bottom: 64px;
+    padding-bottom: 76px;
   }
 }
 
@@ -2337,6 +2338,11 @@ ol {
 
   .footer-main-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-col-title {
+    margin-bottom: var(--space-3);
   }
 
   .footer-bottom-flex {
@@ -2353,6 +2359,15 @@ ol {
 @media (max-width: 640px) {
   .top-banner {
     display: none;
+  }
+
+  /* Kartu HP: padding seragam 1.5rem — cukup lapang, tidak mepet */
+  .ctype-card,
+  .package-card,
+  .step-card,
+  .daily-card,
+  .review-card {
+    padding: var(--space-6);
   }
 
   .hero-section {
@@ -2391,6 +2406,11 @@ ol {
   .packages-grid,
   .steps-row {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .catering-types-grid {
+    gap: var(--space-5);
   }
 
   .daily-card-badge {
