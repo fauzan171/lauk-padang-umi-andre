@@ -442,7 +442,7 @@ ol {
    ─────────────────────────────── */
 .hero-section {
   position: relative;
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream-dark);
   overflow: hidden;
 }
@@ -557,7 +557,7 @@ ol {
    7. CATERING HUB
    ─────────────────────────────── */
 .section-catering-hub {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-dark) var(--weave);
   color: var(--text-light);
   position: relative;
@@ -578,55 +578,6 @@ ol {
   color: var(--text-muted-light);
   max-width: 700px;
   margin-inline: auto;
-}
-
-.chub-pillars-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-  margin: var(--space-12) 0 var(--space-10);
-}
-
-.chub-pillar {
-  padding: var(--space-8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.03);
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.chub-pillar:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-gold);
-}
-
-.chub-pillar-highlight {
-  background: rgba(169, 68, 44, 0.2);
-  border-color: rgba(200, 150, 63, 0.4);
-}
-
-.chub-pillar-icon {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  background: rgba(200, 150, 63, 0.15);
-  color: var(--gold);
-  margin-bottom: var(--space-5);
-}
-
-.chub-pillar h3 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  margin-bottom: var(--space-3);
-  color: var(--text-light);
-}
-
-.chub-pillar p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--text-muted-light);
 }
 
 .chub-action-box {
@@ -658,7 +609,7 @@ ol {
    8. CATERING SERVICES
    ─────────────────────────────── */
 .section-catering-services {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream);
 }
 
@@ -672,7 +623,7 @@ ol {
 .ctype-card {
   display: flex;
   flex-direction: column;
-  padding: var(--space-8);
+  padding: var(--space-10) var(--space-8);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   background: var(--bg-white);
@@ -911,7 +862,7 @@ ol {
    9. CATERING CATALOG
    ─────────────────────────────── */
 .section-catering-catalog {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream-dark);
 }
 
@@ -1121,7 +1072,7 @@ ol {
    10. ABOUT
    ─────────────────────────────── */
 .section-about {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream);
 }
 
@@ -1244,7 +1195,7 @@ ol {
    11. MENU HARIAN
    ─────────────────────────────── */
 .section-menu {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-white);
 }
 
@@ -1337,22 +1288,6 @@ ol {
   flex-grow: 1;
 }
 
-.daily-traits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: var(--space-5);
-}
-
-.daily-trait-chip {
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  background: var(--bg-cream-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-}
-
 .btn-add-order {
   display: inline-flex;
   align-items: center;
@@ -1375,7 +1310,7 @@ ol {
    12. ORDER CHANNELS
    ─────────────────────────────── */
 .section-order {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream-dark);
 }
 
@@ -1434,27 +1369,6 @@ ol {
 .wa-primary-hours {
   font-size: 0.85rem;
   color: var(--text-muted-light);
-}
-
-.wa-primary-perks {
-  display: grid;
-  gap: var(--space-3);
-  flex: 1 1 280px;
-}
-
-.wa-primary-perks li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-muted-light);
-}
-
-.perk-check {
-  flex-shrink: 0;
-  color: var(--gold);
-  margin-top: 0.15rem;
 }
 
 .wa-primary-btn {
@@ -1535,7 +1449,7 @@ ol {
    13. DINE IN
    ─────────────────────────────── */
 .section-dinein {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-dark) var(--weave);
   color: var(--text-light);
 }
@@ -1556,45 +1470,6 @@ ol {
   margin: 0 auto var(--space-10);
   font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--text-muted-light);
-}
-
-.dinein-perks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-  margin-bottom: var(--space-10);
-}
-
-.dinein-perk-item {
-  padding: var(--space-7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
-  text-align: center;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.perk-icon-circle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: 0 auto var(--space-4);
-  background: rgba(200, 150, 63, 0.15);
-  color: var(--gold);
-}
-
-.dinein-perk-item h4 {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  margin-bottom: var(--space-2);
-  color: var(--text-light);
-}
-
-.dinein-perk-item p {
-  font-size: 0.9rem;
-  line-height: 1.65;
   color: var(--text-muted-light);
 }
 
@@ -1626,7 +1501,7 @@ ol {
    14. TESTIMONIALS
    ─────────────────────────────── */
 .section-testi {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream);
 }
 
@@ -1702,7 +1577,7 @@ ol {
    15. LOCATION
    ─────────────────────────────── */
 .section-location {
-  padding: var(--space-24) 0;
+  padding: var(--space-24) 0; /* 6rem, napas antar-section */
   background: var(--bg-cream-dark);
 }
 
@@ -2333,10 +2208,6 @@ ol {
     max-width: 720px;
   }
 
-  .chub-pillars-row {
-    grid-template-columns: 1fr;
-  }
-
   .catering-types-grid {
     grid-template-columns: 1fr;
   }
@@ -2410,7 +2281,7 @@ ol {
   .section-dinein,
   .section-testi,
   .section-location {
-    padding: var(--space-20) 0;
+    padding: var(--space-16) 0;
   }
 
   /* Napas vertikal: HP butuh jeda lebih jelas antar-blok
@@ -2434,17 +2305,13 @@ ol {
     width: 100%;
   }
 
-  .dinein-perks-grid {
-    grid-template-columns: 1fr;
+  .dinein-booking-box {
+    flex-direction: column;
+    text-align: center;
   }
 
   .testimonials-grid {
     grid-template-columns: 1fr;
-  }
-
-  .wa-primary-left,
-  .wa-primary-perks {
-    flex: 1 1 100%;
   }
 
   .wa-primary-btn {
@@ -2689,4 +2556,8 @@ ol {
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.chub-cta {
+  margin-top: var(--space-8);
 }

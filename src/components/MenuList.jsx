@@ -33,12 +33,6 @@ export default function MenuList({ onSelectItem }) {
                     <h4 className="daily-card-name">{item.name}</h4>
                     <p className="daily-card-desc">{item.desc}</p>
 
-                    <ul className="daily-traits">
-                      {item.traits.map((trait) => (
-                        <li className="daily-trait-chip" key={trait}>{trait}</li>
-                      ))}
-                    </ul>
-
                     <button
                       className="btn-add-order"
                       onClick={() => onSelectItem(item)}

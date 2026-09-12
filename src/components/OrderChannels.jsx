@@ -1,6 +1,6 @@
 import React from 'react';
 import { RESTAURANT_INFO, WA_LINKS } from '../data';
-import { Check, PackageCheck, Users, Repeat, UtensilsCrossed } from 'lucide-react';
+import { PackageCheck, Users, Repeat, UtensilsCrossed } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 const QUICK_LINKS = [
@@ -35,12 +35,6 @@ export default function OrderChannels() {
               <p className="wa-primary-hours">{RESTAURANT_INFO.hours}</p>
             </div>
           </div>
-
-          <ul className="wa-primary-perks">
-            <li><Check size={16} className="perk-check" /> Lauk &amp; harga menyesuaikan permintaan</li>
-            <li><Check size={16} className="perk-check" /> Bisa atur jam kirim &amp; lokasi acara</li>
-            <li><Check size={16} className="perk-check" /> Tanpa biaya tambahan aplikasi</li>
-          </ul>
 
           <a
             href={WA_LINKS.catering}
