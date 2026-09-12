@@ -55,7 +55,6 @@ export default function CateringServices() {
                 className={`package-card ${pkg.featured ? 'package-card-featured' : ''}`}
                 key={pkg.id}
               >
-                {pkg.featured && <span className="package-flag">Paling Sering Dipesan</span>}
                 <h3 className="package-name">{pkg.name}</h3>
                 <p className="package-summary">{pkg.summary}</p>
                 <ul className="package-contents">

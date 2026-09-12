@@ -68,7 +68,7 @@
   --weave: repeating-linear-gradient(
     45deg,
     transparent 0 6px,
-    rgba(200, 150, 63, 0.045) 6px 7px,
+    rgba(200, 150, 63, 0.03) 6px 7px,
     transparent 7px 14px
   );
 }
@@ -151,18 +151,18 @@ ol {
 .eyebrow-text {
   display: inline-block;
   margin-bottom: var(--space-3);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: var(--gold);
 }
 
 .section-heading {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 4vw, 2.75rem);
-  font-weight: 800;
-  line-height: 1.12;
+  font-weight: 700;
+  line-height: 1.15;
   letter-spacing: -0.01em;
   text-wrap: balance; /* judul patah rapi, tidak ada widow satu kata */
   color: var(--text-primary);
@@ -172,7 +172,7 @@ ol {
 .section-heading-sm {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.01em;
   text-wrap: balance;
@@ -215,27 +215,25 @@ ol {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.85rem 1.6rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: background 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-gold {
   background: var(--terracotta);
   color: var(--text-light);
-  box-shadow: var(--shadow-sm);
 }
 
 .btn-gold:hover {
   background: var(--terracotta-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn-outline-dark {
-  background: var(--bg-white);
+  background: transparent;
   border: 1px solid var(--text-primary);
   color: var(--text-primary);
 }
@@ -463,31 +461,20 @@ ol {
 .hero-badge-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.9rem;
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-full);
-  background: var(--bg-white);
-  color: var(--terracotta);
+  gap: 0.6rem;
+  color: var(--gold);
   font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   margin-bottom: var(--space-6);
-}
-
-.pill-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--sage);
 }
 
 .hero-headline {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5.5vw, 4.2rem);
-  font-weight: 900;
-  line-height: 1.05;
+  font-weight: 700;
+  line-height: 1.08;
   letter-spacing: -0.015em;
   text-wrap: balance;
   color: var(--text-primary);
@@ -566,55 +553,6 @@ ol {
   pointer-events: none;
 }
 
-.floating-dish-card {
-  position: absolute;
-  right: var(--space-6);
-  bottom: var(--space-6);
-  max-width: 280px;
-  padding: var(--space-4);
-  background: rgba(255, 253, 249, 0.96);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-}
-
-.dish-star {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: var(--space-2);
-}
-
-.floating-dish-card strong {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.floating-dish-card p {
-  font-size: 0.82rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-3);
-}
-
-.dish-price-badge {
-  display: inline-block;
-  padding: 0.35rem 0.7rem;
-  border-radius: var(--radius-full);
-  background: var(--bg-cream-dark);
-  color: var(--terracotta);
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
 /* ───────────────────────────────
    7. CATERING HUB
    ─────────────────────────────── */
@@ -623,21 +561,6 @@ ol {
   background: var(--bg-dark) var(--weave);
   color: var(--text-light);
   position: relative;
-}
-
-.chub-photo-strip {
-  max-width: 760px;
-  margin: 0 auto var(--space-10);
-  padding: var(--space-2);
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-md);
-}
-
-.chub-photo-strip img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
 }
 
 .chub-container {
@@ -807,17 +730,18 @@ ol {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.1rem;
-  border-radius: var(--radius-md);
-  background: var(--text-primary);
-  color: var(--text-light);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .ctype-btn:hover {
-  background: var(--terracotta);
+  background: var(--text-primary);
+  color: var(--bg-white);
 }
 
 /* Packages */
@@ -851,22 +775,42 @@ ol {
 
 .package-card-featured {
   border-color: var(--gold);
-  background: linear-gradient(160deg, var(--bg-white) 0%, #f6e7cd 100%);
-  box-shadow: var(--shadow-md);
+  background: var(--bg-dark);
+  color: var(--text-muted-light);
 }
 
-.package-flag {
-  position: absolute;
-  top: -10px;
-  left: var(--space-5);
-  padding: 0.25rem 0.7rem;
-  border-radius: var(--radius-full);
-  background: var(--terracotta);
-  color: var(--text-light);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+/* penanda ringan kartu pilihan — pengganti badge melayang */
+.package-card-featured::before {
+  content: 'Paling Sering Dipesan';
+  display: block;
+  margin-bottom: var(--space-4);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: var(--gold);
+}
+
+.package-card-featured .package-name,
+.package-card-featured .package-contents li {
+  color: var(--text-light);
+}
+
+.package-card-featured .package-summary {
+  color: var(--text-muted-light);
+}
+
+.package-card-featured .package-contents {
+  border-top-color: rgba(255, 255, 255, 0.14);
+}
+
+.package-card-featured .package-contents li::before {
+  background: var(--gold);
+}
+
+.package-card-featured .package-price-note {
+  border-top-color: rgba(255, 255, 255, 0.14);
+  color: var(--gold);
 }
 
 .package-name {
@@ -888,7 +832,7 @@ ol {
   gap: var(--space-2);
   padding-top: var(--space-4);
   margin-bottom: var(--space-5);
-  border-top: 1px dashed var(--border-gold);
+  border-top: 1px solid var(--border-gold);
   flex-grow: 1;
 }
 
@@ -928,23 +872,24 @@ ol {
 .steps-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-5);
+  gap: var(--space-8);
   margin-top: var(--space-10);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-light);
 }
 
 .step-card {
-  padding: var(--space-7);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  background: var(--bg-white);
   position: relative;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .step-number {
   display: block;
   font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--gold);
   margin-bottom: var(--space-3);
 }
@@ -1091,8 +1036,8 @@ ol {
   gap: 0.35rem;
   padding: 0.55rem 0.9rem;
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-full);
-  background: var(--bg-white);
+  border-radius: var(--radius-sm);
+  background: transparent;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -1106,30 +1051,6 @@ ol {
 
 .catalog-chip svg {
   color: var(--gold);
-}
-
-.catalog-cta-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-6);
-  padding: var(--space-7) var(--space-8);
-  margin-top: var(--space-16);
-  border: 2px dashed var(--gold);
-  border-radius: var(--radius-md);
-  background: var(--bg-white);
-}
-
-.catalog-cta-strip h4 {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  color: var(--text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.catalog-cta-strip p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
 }
 
 .catalog-faq-block {
@@ -1374,17 +1295,14 @@ ol {
   flex-direction: column;
   padding: var(--space-7);
   border: 1px solid var(--border-light);
-  border-left: 4px solid var(--terracotta);
-  border-radius: var(--radius-md);
-  background: var(--bg-cream);
+  border-radius: var(--radius-sm);
+  background: var(--bg-white);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .daily-card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--border-gold);
-  border-left-color: var(--terracotta);
 }
 
 .daily-card-badge {
@@ -1440,49 +1358,17 @@ ol {
   align-items: center;
   gap: 0.35rem;
   padding: 0.55rem 1rem;
-  border: none;
-  border-radius: var(--radius-md);
-  background: var(--text-primary);
+  border-radius: var(--radius-sm);
+  background: var(--terracotta);
   color: var(--text-light);
   font-size: 0.85rem;
-  font-weight: 700;
-  transition: background 0.2s ease;
+  font-weight: 600;
+  transition: background 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   align-self: flex-start;
 }
 
 .btn-add-order:hover {
-  background: var(--terracotta);
-}
-
-.catering-alert-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-6);
-  padding: var(--space-7) var(--space-8);
-  border: 2px dashed var(--gold);
-  border-radius: var(--radius-md);
-  background: var(--bg-cream);
-}
-
-.catering-text h3 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.catering-text p {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
-}
-
-.catering-alert-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  flex-shrink: 0;
+  background: var(--terracotta-dark);
 }
 
 /* ───────────────────────────────
@@ -2179,7 +2065,7 @@ ol {
 
 .modal-price-note {
   padding-top: var(--space-4);
-  border-top: 1px dashed var(--border-gold);
+  border-top: 1px solid var(--border-gold);
   font-size: 0.85rem;
   line-height: 1.6;
   color: var(--text-secondary);
@@ -2515,12 +2401,6 @@ ol {
     white-space: normal;
   }
 
-  .floating-dish-card {
-    position: static;
-    margin-top: var(--space-4);
-    max-width: none;
-  }
-
   .section-catering-hub,
   .section-catering-services,
   .section-catering-catalog,
@@ -2549,17 +2429,7 @@ ol {
     text-wrap: initial; /* di layar sempit, balance bisa paksa font kecil */
   }
 
-  .chub-action-box,
-  .catalog-cta-strip,
-  .catering-alert-box,
-  .dinein-booking-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .chub-action-box .btn,
-  .catalog-cta-strip .btn,
-  .catering-alert-box .btn,
   .dinein-booking-box .btn {
     width: 100%;
   }
@@ -2735,8 +2605,8 @@ ol {
   opacity: 0;
   transform: translateY(22px);
   transition:
-    opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
-    transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity 0.65s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: opacity, transform;
 }
 
@@ -2750,8 +2620,8 @@ ol {
   opacity: 0;
   transform: translateY(22px);
   transition:
-    opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
-    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .reveal-group.revealed > * {
@@ -2779,25 +2649,44 @@ ol {
 }
 
 .hero-badge-pill {
-  animation: rise-in 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: rise-in 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 
 .hero-headline {
-  animation: rise-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+  animation: rise-in 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s both;
 }
 
 .hero-paragraph {
-  animation: rise-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s both;
+  animation: rise-in 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s both;
 }
 
 .hero-cta-row {
-  animation: rise-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s both;
+  animation: rise-in 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s both;
 }
 
 .hero-trust-badges {
-  animation: rise-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.4s both;
+  animation: rise-in 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s both;
 }
 
 .hero-visual-col {
-  animation: rise-in 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.25s both;
+  animation: rise-in 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s both;
+}
+
+/* Crosslink tenang antar-section — pengganti strip CTA */
+.menu-crosslink {
+  max-width: 640px;
+  margin: var(--space-12) auto 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.menu-crosslink a {
+  color: var(--terracotta);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

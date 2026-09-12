@@ -1,7 +1,6 @@
 import React from 'react';
 import { CATERING_CATALOG, CATERING_FAQ, WA_LINKS, RESTAURANT_INFO } from '../data';
 import { Plus } from 'lucide-react';
-import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CateringCatalog() {
   return (
@@ -59,19 +58,18 @@ export default function CateringCatalog() {
           })}
         </div>
 
-        <div className="catalog-cta-strip reveal">
-          <div>
-            <h4>Tidak menemukan lauk yang dicari?</h4>
-            <p>Sebutkan lewat WhatsApp — menu di luar katalog bisa dibicarakan.</p>
-          </div>
-          <a
-            href={WA_LINKS.laukPadang}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-gold"
-          >
-            <WhatsAppIcon size={18} /> Request Lauk Khusus
-          </a>
+        <div className="menu-crosslink reveal">
+          <p>
+            Tidak menemukan lauk yang dicari?{" "}
+            <a
+              href={WA_LINKS.laukPadang}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request lewat WhatsApp
+            </a>{" "}
+            — menu di luar katalog bisa dibicarakan.
+          </p>
         </div>
 
         <div className="catalog-faq-block reveal">

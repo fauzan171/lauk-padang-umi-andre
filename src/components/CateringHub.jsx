@@ -1,15 +1,11 @@
 import React from 'react';
-import { HERO_IMAGE, WA_LINKS } from '../data';
+import { WA_LINKS } from '../data';
 import { ChefHat, Wallet, PackageCheck } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function CateringHub() {
   return (
     <section className="section-catering-hub" id="catering">
-      <div className="chub-photo-strip" aria-hidden="true">
-        <img src={HERO_IMAGE} alt="" />
-      </div>
-
       <div className="container chub-container">
         <div className="chub-header text-center reveal">
           <span className="eyebrow-text gold-text">LAYANAN UTAMA KAMI</span>

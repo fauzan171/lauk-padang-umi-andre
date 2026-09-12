@@ -1,6 +1,6 @@
 import React from 'react';
 import { HERO_IMAGE, WA_LINKS } from '../data';
-import { UtensilsCrossed, Clock, ShieldCheck, MapPin, PackageCheck } from 'lucide-react';
+import { UtensilsCrossed, Clock, ShieldCheck, MapPin } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Hero() {
@@ -9,7 +9,6 @@ export default function Hero() {
       <div className="container hero-content-grid">
         <div className="hero-text-col">
           <div className="hero-badge-pill">
-            <span className="pill-dot"></span>
             CATERING &amp; MASAKAN RUMAHAN • CAWANG, JAKARTA TIMUR
           </div>
 
@@ -62,13 +61,6 @@ export default function Hero() {
               className="hero-main-photo"
             />
             <div className="image-gold-border"></div>
-
-            <div className="floating-dish-card">
-              <div className="dish-star"><PackageCheck size={16} /> Layanan Utama</div>
-              <strong>Paket Nasi Kotak Catering</strong>
-              <p>Lauk Padang &amp; rumahan, sayur, sambal, dan kerupuk dikemas terpisah</p>
-              <span className="dish-price-badge">Lauk &amp; harga menyesuaikan permintaan</span>
-            </div>
           </div>
         </div>
       </div>

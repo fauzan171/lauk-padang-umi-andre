@@ -1,6 +1,6 @@
 import React from 'react';
 import { DAILY_MENU_GROUPS, WA_LINKS } from '../data';
-import { Plus, ArrowRight } from 'lucide-react';
+import { Plus } from 'lucide-react';
 
 export default function MenuList({ onSelectItem }) {
   return (
@@ -52,24 +52,19 @@ export default function MenuList({ onSelectItem }) {
           ))}
         </div>
 
-        <div className="catering-alert-box reveal">
-          <div className="catering-text">
-            <h3>Butuh porsi banyak atau lauk Padang lengkap?</h3>
-            <p>Pindah ke jalur catering — lauk dan harga menyesuaikan permintaan.</p>
-          </div>
-          <div className="catering-alert-actions">
-            <a href="#katalog-lauk" className="btn btn-outline-dark">
-              Lihat Katalog Lauk <ArrowRight size={16} />
-            </a>
+        <div className="menu-crosslink reveal">
+          <p>
+            Butuh porsi banyak atau lauk Padang lengkap?{" "}
+            <a href="#katalog-lauk">Lihat katalog lauk</a> atau{" "}
             <a
               href={WA_LINKS.catering}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-gold"
             >
-              Konsultasi Catering
+              konsultasi catering
             </a>
-          </div>
+            .
+          </p>
         </div>
       </div>
     </section>
